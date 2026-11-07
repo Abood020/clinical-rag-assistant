@@ -27,9 +27,9 @@ st.set_page_config(page_title="Clinical Assistant Prototype", page_icon="🩺", 
 VERDICT_STYLE = {"SUPPORTED": "✅", "UNSUPPORTED": "❓", "CONTRADICTED": "❌"}
 
 
-def show_check(output_text: str, patient_id: str) -> None:
+def show_check(output_text: str, patient_id: str, question: str | None = None) -> None:
     with st.spinner("Checking every claim against the patient record..."):
-        report = evaluate(output_text, patient_id)
+        report = evaluate(output_text, patient_id, question)
 
     score = report.faithfulness
     c1, c2, c3 = st.columns(3)
@@ -88,7 +88,7 @@ with tab_ask:
         with st.expander("Facts retrieved for this question (RAG context)"):
             st.code("\n".join(out.sources), language=None)
         st.subheader("Faithfulness check")
-        show_check(out.text, pid)
+        show_check(out.text, pid, question)
 
 with tab_record:
     st.caption("Each line is one FHIR resource. The ID in brackets is what the assistant cites.")
