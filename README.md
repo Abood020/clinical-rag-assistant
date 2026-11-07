@@ -5,6 +5,10 @@ a physician picks a patient, gets an **AI-generated clinical summary**, and can 
 about the patient record**. Every output is automatically **checked claim by claim against the
 source record** before a clinician relies on it.
 
+**🔗 Live demo: [clinical-assistant-abdallah.streamlit.app](https://clinical-assistant-abdallah.streamlit.app/)**
+Try it: pick *Omar Haddad (p05)*, a diabetic patient with no medication on record, and ask
+"What diabetes medication is the patient taking?" The assistant should answer that it is not in the record.
+
 > All patient data is **synthetic**. No real patient information is used.
 
 ## Why I built it
