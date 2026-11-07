@@ -120,7 +120,7 @@ JUDGE_PROMPT = """You are a strict clinical fact-checker. Check whether a genera
 Patient record (each fact has a source ID):
 {record}
 
-Generated text:
+{question_block}Generated text:
 \"\"\"
 {output}
 \"\"\"
@@ -150,9 +150,21 @@ def _parse_json(raw: str) -> dict:
     return json.loads(raw[start:end + 1])
 
 
-def llm_judge(output: str, patient_id: str) -> list[Claim]:
+QUESTION_BLOCK = """The generated text is an answer to this physician question: "{question}"
+If the answer says "Not found in the patient record", treat it as the claim
+"the record does not contain the answer to this question". It is SUPPORTED if the record
+really has no such information, and CONTRADICTED if the record does contain it.
+
+"""
+
+
+def llm_judge(output: str, patient_id: str, question: str | None = None) -> list[Claim]:
+    # Without the question, "Not found in the patient record" looks like "the record is empty"
+    # and gets wrongly marked CONTRADICTED. The judge needs the same context the generator had.
     record = record_as_text(load_patient(patient_id))
-    raw = _judge_llm().invoke(JUDGE_PROMPT.format(record=record, output=output)).content
+    question_block = QUESTION_BLOCK.format(question=question) if question else ""
+    prompt = JUDGE_PROMPT.format(record=record, output=output, question_block=question_block)
+    raw = _judge_llm().invoke(prompt).content
     data = _parse_json(raw)
     claims = []
     for c in data.get("claims", []):
@@ -163,5 +175,5 @@ def llm_judge(output: str, patient_id: str) -> list[Claim]:
     return claims
 
 
-def evaluate(output: str, patient_id: str) -> JudgeReport:
-    return JudgeReport(claims=llm_judge(output, patient_id), rule_issues=rule_checks(output, patient_id))
+def evaluate(output: str, patient_id: str, question: str | None = None) -> JudgeReport:
+    return JudgeReport(claims=llm_judge(output, patient_id, question), rule_issues=rule_checks(output, patient_id))
