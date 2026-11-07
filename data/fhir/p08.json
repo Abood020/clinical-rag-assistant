@@ -1,0 +1,302 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-p08",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:p08",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p08",
+        "name": [
+          {
+            "given": [
+              "Sara"
+            ],
+            "family": "Mathews"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1988-06-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p08-cond-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p08-cond-1",
+        "subject": {
+          "reference": "Patient/p08"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "87522002",
+              "display": "Iron deficiency anemia"
+            }
+          ],
+          "text": "Iron deficiency anemia"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2026-02-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p08-med-1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p08-med-1",
+        "subject": {
+          "reference": "Patient/p08"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Ferrous sulfate 325 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet once daily"
+          }
+        ],
+        "authoredOn": "2026-02-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p08-allergy-1",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "p08-allergy-1",
+        "patient": {
+          "reference": "Patient/p08"
+        },
+        "criticality": "high",
+        "code": {
+          "text": "Ibuprofen"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Bronchospasm"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p08-obs-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p08-obs-1",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p08"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "effectiveDateTime": "2026-02-15",
+        "valueQuantity": {
+          "value": 9.4,
+          "unit": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0
+            },
+            "high": {
+              "value": 17.5
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p08-obs-2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p08-obs-2",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p08"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2276-4",
+              "display": "Ferritin"
+            }
+          ],
+          "text": "Ferritin"
+        },
+        "effectiveDateTime": "2026-02-15",
+        "valueQuantity": {
+          "value": 8,
+          "unit": "ng/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 30
+            },
+            "high": {
+              "value": 400
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p08-obs-3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p08-obs-3",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p08"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "effectiveDateTime": "2026-05-20",
+        "valueQuantity": {
+          "value": 11.6,
+          "unit": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0
+            },
+            "high": {
+              "value": 17.5
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p08-obs-4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p08-obs-4",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p08"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2276-4",
+              "display": "Ferritin"
+            }
+          ],
+          "text": "Ferritin"
+        },
+        "effectiveDateTime": "2026-05-20",
+        "valueQuantity": {
+          "value": 24,
+          "unit": "ng/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 30
+            },
+            "high": {
+              "value": 400
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p08-enc-1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p08-enc-1",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p08"
+        },
+        "period": {
+          "start": "2026-05-20"
+        },
+        "reasonCode": [
+          {
+            "text": "Anemia follow-up"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Internal medicine clinic"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

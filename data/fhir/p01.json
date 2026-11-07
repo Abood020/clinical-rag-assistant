@@ -1,0 +1,531 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-p01",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:p01",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p01",
+        "name": [
+          {
+            "given": [
+              "Khalid"
+            ],
+            "family": "Al Mansoori"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1968-03-14"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-cond-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p01-cond-1",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Type 2 diabetes mellitus"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2016-05-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-cond-2",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p01-cond-2",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "38341003",
+              "display": "Essential hypertension"
+            }
+          ],
+          "text": "Essential hypertension"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2018-09-11"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-med-1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p01-med-1",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Metformin 1000 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet twice daily"
+          }
+        ],
+        "authoredOn": "2016-05-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-med-2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p01-med-2",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Lisinopril 10 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet once daily"
+          }
+        ],
+        "authoredOn": "2018-09-11"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-allergy-1",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "p01-allergy-1",
+        "patient": {
+          "reference": "Patient/p01"
+        },
+        "criticality": "high",
+        "code": {
+          "text": "Penicillin"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Hives"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-obs-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p01-obs-1",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "effectiveDateTime": "2025-04-10",
+        "valueQuantity": {
+          "value": 7.8,
+          "unit": "%"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.0
+            },
+            "high": {
+              "value": 5.6
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-obs-2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p01-obs-2",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "effectiveDateTime": "2025-10-15",
+        "valueQuantity": {
+          "value": 8.4,
+          "unit": "%"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.0
+            },
+            "high": {
+              "value": 5.6
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-obs-3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p01-obs-3",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "effectiveDateTime": "2026-04-20",
+        "valueQuantity": {
+          "value": 9.1,
+          "unit": "%"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.0
+            },
+            "high": {
+              "value": 5.6
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-obs-4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p01-obs-4",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2345-7",
+              "display": "Fasting glucose"
+            }
+          ],
+          "text": "Fasting glucose"
+        },
+        "effectiveDateTime": "2026-04-20",
+        "valueQuantity": {
+          "value": 168,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70
+            },
+            "high": {
+              "value": 99
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-obs-5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p01-obs-5",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "effectiveDateTime": "2026-04-20",
+        "valueQuantity": {
+          "value": 142,
+          "unit": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 90
+            },
+            "high": {
+              "value": 130
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-obs-6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p01-obs-6",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "effectiveDateTime": "2026-04-20",
+        "valueQuantity": {
+          "value": 88,
+          "unit": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 60
+            },
+            "high": {
+              "value": 85
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-obs-7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p01-obs-7",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index"
+            }
+          ],
+          "text": "Body mass index"
+        },
+        "effectiveDateTime": "2026-04-20",
+        "valueQuantity": {
+          "value": 31.2,
+          "unit": "kg/m2"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 18.5
+            },
+            "high": {
+              "value": 24.9
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-obs-8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p01-obs-8",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine"
+            }
+          ],
+          "text": "Creatinine"
+        },
+        "effectiveDateTime": "2026-04-20",
+        "valueQuantity": {
+          "value": 1.0,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.6
+            },
+            "high": {
+              "value": 1.2
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p01-enc-1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p01-enc-1",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p01"
+        },
+        "period": {
+          "start": "2026-04-20"
+        },
+        "reasonCode": [
+          {
+            "text": "Diabetes follow-up visit"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Endocrinology clinic"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

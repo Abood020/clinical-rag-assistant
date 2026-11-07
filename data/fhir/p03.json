@@ -1,0 +1,488 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-p03",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:p03",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p03",
+        "name": [
+          {
+            "given": [
+              "Rajesh"
+            ],
+            "family": "Nair"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1950-11-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-cond-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p03-cond-1",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "84114007",
+              "display": "Heart failure"
+            }
+          ],
+          "text": "Heart failure"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2021-03-19"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-cond-2",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p03-cond-2",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "49436004",
+              "display": "Atrial fibrillation"
+            }
+          ],
+          "text": "Atrial fibrillation"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2021-03-19"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-med-1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p03-med-1",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Warfarin 5 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Dose adjusted per INR"
+          }
+        ],
+        "authoredOn": "2021-03-20"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-med-2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p03-med-2",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Furosemide 40 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet once daily"
+          }
+        ],
+        "authoredOn": "2021-03-20"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-med-3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p03-med-3",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Bisoprolol 5 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet once daily"
+          }
+        ],
+        "authoredOn": "2021-03-20"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-allergy-1",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "p03-allergy-1",
+        "patient": {
+          "reference": "Patient/p03"
+        },
+        "criticality": "low",
+        "code": {
+          "text": "Sulfonamide antibiotics"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Rash"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-obs-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p03-obs-1",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6301-6",
+              "display": "INR"
+            }
+          ],
+          "text": "INR"
+        },
+        "effectiveDateTime": "2026-06-01",
+        "valueQuantity": {
+          "value": 1.6,
+          "unit": ""
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 2.0
+            },
+            "high": {
+              "value": 3.0
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-obs-2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p03-obs-2",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6301-6",
+              "display": "INR"
+            }
+          ],
+          "text": "INR"
+        },
+        "effectiveDateTime": "2026-07-01",
+        "valueQuantity": {
+          "value": 2.4,
+          "unit": ""
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 2.0
+            },
+            "high": {
+              "value": 3.0
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-obs-3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p03-obs-3",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30934-4",
+              "display": "BNP"
+            }
+          ],
+          "text": "BNP"
+        },
+        "effectiveDateTime": "2026-07-01",
+        "valueQuantity": {
+          "value": 480,
+          "unit": "pg/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0
+            },
+            "high": {
+              "value": 100
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-obs-4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p03-obs-4",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium"
+            }
+          ],
+          "text": "Potassium"
+        },
+        "effectiveDateTime": "2026-07-01",
+        "valueQuantity": {
+          "value": 3.9,
+          "unit": "mmol/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5
+            },
+            "high": {
+              "value": 5.1
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-obs-5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p03-obs-5",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "effectiveDateTime": "2026-07-01",
+        "valueQuantity": {
+          "value": 118,
+          "unit": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 90
+            },
+            "high": {
+              "value": 130
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-obs-6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p03-obs-6",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "effectiveDateTime": "2026-07-01",
+        "valueQuantity": {
+          "value": 72,
+          "unit": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 60
+            },
+            "high": {
+              "value": 85
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-enc-1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p03-enc-1",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "period": {
+          "start": "2026-06-28"
+        },
+        "reasonCode": [
+          {
+            "text": "Emergency visit: shortness of breath"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Emergency department"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p03-enc-2",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p03-enc-2",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p03"
+        },
+        "period": {
+          "start": "2026-07-01"
+        },
+        "reasonCode": [
+          {
+            "text": "Anticoagulation clinic"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Cardiology clinic"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

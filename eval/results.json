@@ -1,0 +1,365 @@
+{
+  "injection": [
+    {
+      "patient": "p01",
+      "type": "clean",
+      "faithfulness": 1.0,
+      "rule_issues": 1,
+      "non_supported": 0
+    },
+    {
+      "patient": "p01",
+      "type": "wrong_value",
+      "faithfulness": 0.8571428571428571,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p01",
+      "type": "fabricated_medication",
+      "faithfulness": 0.8823529411764706,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p01",
+      "type": "unsupported_claim",
+      "faithfulness": 0.9285714285714286,
+      "caught_by_rules": false,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p01",
+      "type": "contradicted_allergy",
+      "faithfulness": 0.9444444444444444,
+      "caught_by_rules": false,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p02",
+      "type": "clean",
+      "faithfulness": 1.0,
+      "rule_issues": 1,
+      "non_supported": 0
+    },
+    {
+      "patient": "p02",
+      "type": "wrong_value",
+      "faithfulness": 0.9285714285714286,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p02",
+      "type": "fabricated_medication",
+      "faithfulness": 0.9285714285714286,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p02",
+      "type": "unsupported_claim",
+      "faithfulness": 0.8823529411764706,
+      "caught_by_rules": false,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p03",
+      "type": "clean",
+      "faithfulness": 1.0,
+      "rule_issues": 1,
+      "non_supported": 0
+    },
+    {
+      "patient": "p03",
+      "type": "wrong_value",
+      "faithfulness": 0.9444444444444444,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p03",
+      "type": "fabricated_medication",
+      "faithfulness": 0.8947368421052632,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p03",
+      "type": "unsupported_claim",
+      "faithfulness": 0.9473684210526315,
+      "caught_by_rules": false,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p03",
+      "type": "contradicted_allergy",
+      "faithfulness": 0.9411764705882353,
+      "caught_by_rules": false,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p04",
+      "type": "clean",
+      "faithfulness": 1.0,
+      "rule_issues": 2,
+      "non_supported": 0
+    },
+    {
+      "patient": "p04",
+      "type": "wrong_value",
+      "faithfulness": 0.9333333333333333,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p04",
+      "type": "fabricated_medication",
+      "faithfulness": 0.9375,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p04",
+      "type": "unsupported_claim",
+      "faithfulness": 0.8947368421052632,
+      "caught_by_rules": false,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p05",
+      "type": "clean",
+      "faithfulness": 1.0,
+      "rule_issues": 1,
+      "non_supported": 0
+    },
+    {
+      "patient": "p05",
+      "type": "wrong_value",
+      "faithfulness": 0.7777777777777778,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p05",
+      "type": "fabricated_medication",
+      "faithfulness": 0.9,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p05",
+      "type": "unsupported_claim",
+      "faithfulness": 0.9090909090909091,
+      "caught_by_rules": false,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p05",
+      "type": "contradicted_allergy",
+      "faithfulness": 0.9090909090909091,
+      "caught_by_rules": false,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p06",
+      "type": "clean",
+      "faithfulness": 1.0,
+      "rule_issues": 1,
+      "non_supported": 0
+    },
+    {
+      "patient": "p06",
+      "type": "wrong_value",
+      "faithfulness": 0.8888888888888888,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p06",
+      "type": "fabricated_medication",
+      "faithfulness": 0.9,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p06",
+      "type": "unsupported_claim",
+      "faithfulness": 0.9,
+      "caught_by_rules": false,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p07",
+      "type": "clean",
+      "faithfulness": 1.0,
+      "rule_issues": 0,
+      "non_supported": 0
+    },
+    {
+      "patient": "p07",
+      "type": "wrong_value",
+      "faithfulness": 0.875,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p07",
+      "type": "fabricated_medication",
+      "faithfulness": 0.8888888888888888,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p07",
+      "type": "unsupported_claim",
+      "faithfulness": 1.0,
+      "caught_by_rules": false,
+      "caught_by_judge": false
+    },
+    {
+      "patient": "p08",
+      "type": "clean",
+      "faithfulness": 0.9090909090909091,
+      "rule_issues": 1,
+      "non_supported": 1
+    },
+    {
+      "patient": "p08",
+      "type": "wrong_value",
+      "faithfulness": 0.8461538461538461,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p08",
+      "type": "fabricated_medication",
+      "faithfulness": 0.9285714285714286,
+      "caught_by_rules": true,
+      "caught_by_judge": false
+    },
+    {
+      "patient": "p08",
+      "type": "unsupported_claim",
+      "faithfulness": 0.8181818181818182,
+      "caught_by_rules": false,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p08",
+      "type": "contradicted_allergy",
+      "faithfulness": 0.8333333333333334,
+      "caught_by_rules": false,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p09",
+      "type": "clean",
+      "faithfulness": 0.9090909090909091,
+      "rule_issues": 0,
+      "non_supported": 1
+    },
+    {
+      "patient": "p09",
+      "type": "wrong_value",
+      "faithfulness": 0.7777777777777778,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p09",
+      "type": "fabricated_medication",
+      "faithfulness": 0.8333333333333334,
+      "caught_by_rules": true,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p09",
+      "type": "unsupported_claim",
+      "faithfulness": 0.8461538461538461,
+      "caught_by_rules": false,
+      "caught_by_judge": true
+    },
+    {
+      "patient": "p10",
+      "type": "clean",
+      "faithfulness": 0.75,
+      "rule_issues": 0,
+      "non_supported": 1
+    },
+    {
+      "patient": "p10",
+      "type": "wrong_value",
+      "faithfulness": 0.6666666666666666,
+      "caught_by_rules": true,
+      "caught_by_judge": false
+    },
+    {
+      "patient": "p10",
+      "type": "fabricated_medication",
+      "faithfulness": 0.75,
+      "caught_by_rules": true,
+      "caught_by_judge": false
+    }
+  ],
+  "traps": [
+    {
+      "patient": "p05",
+      "question": "What diabetes medication is the patient taking?",
+      "answer": "Not found in the patient record.",
+      "refused_correctly": true
+    },
+    {
+      "patient": "p10",
+      "question": "What chronic conditions does the patient have?",
+      "answer": "Not found in the patient record.",
+      "refused_correctly": true
+    },
+    {
+      "patient": "p06",
+      "question": "What was the patient's most recent HbA1c?",
+      "answer": "Not found in the patient record.",
+      "refused_correctly": true
+    },
+    {
+      "patient": "p08",
+      "question": "What is the patient's blood pressure?",
+      "answer": "Not found in the patient record.",
+      "refused_correctly": true
+    }
+  ],
+  "summary": {
+    "caught": {
+      "wrong_value": {
+        "rules": 10,
+        "judge": 9,
+        "either": 10,
+        "total": 10
+      },
+      "fabricated_medication": {
+        "rules": 10,
+        "judge": 8,
+        "either": 10,
+        "total": 10
+      },
+      "unsupported_claim": {
+        "rules": 0,
+        "judge": 8,
+        "either": 8,
+        "total": 9
+      },
+      "contradicted_allergy": {
+        "rules": 0,
+        "judge": 4,
+        "either": 4,
+        "total": 4
+      }
+    },
+    "clean_flags": {
+      "rules": 7,
+      "judge": 3,
+      "total": 10
+    },
+    "report": "\n=== Faithfulness checker: error-injection results ===\nError type                 Rules   Judge  Combined\nwrong_value             10/10    9/10    10/10\nfabricated_medication   10/10    8/10    10/10\nunsupported_claim       0/9     8/9     8/9\ncontradicted_allergy    0/4     4/4     4/4\nALL ERRORS              20/33    29/33    32/33\n\nClean summaries flagged (false alarms): rules 7/10, judge 3/10\nTrap questions answered 'not found': 4/4"
+  }
+}

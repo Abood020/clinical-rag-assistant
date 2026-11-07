@@ -1,0 +1,236 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-p09",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:p09",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p09",
+        "name": [
+          {
+            "given": [
+              "Yousef"
+            ],
+            "family": "Al Dhaheri"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1958-10-10"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p09-cond-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p09-cond-1",
+        "subject": {
+          "reference": "Patient/p09"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "13645005",
+              "display": "Chronic obstructive pulmonary disease"
+            }
+          ],
+          "text": "Chronic obstructive pulmonary disease"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2018-01-22"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p09-med-1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p09-med-1",
+        "subject": {
+          "reference": "Patient/p09"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Tiotropium inhaler 18 mcg"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 inhalation once daily"
+          }
+        ],
+        "authoredOn": "2018-01-22"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p09-med-2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p09-med-2",
+        "subject": {
+          "reference": "Patient/p09"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Salbutamol inhaler 100 mcg"
+        },
+        "dosageInstruction": [
+          {
+            "text": "2 puffs as needed"
+          }
+        ],
+        "authoredOn": "2018-01-22"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p09-obs-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p09-obs-1",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p09"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "effectiveDateTime": "2026-01-14",
+        "valueQuantity": {
+          "value": 91,
+          "unit": "%"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 95
+            },
+            "high": {
+              "value": 100
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p09-obs-2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p09-obs-2",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p09"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "effectiveDateTime": "2026-03-02",
+        "valueQuantity": {
+          "value": 94,
+          "unit": "%"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 95
+            },
+            "high": {
+              "value": 100
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p09-enc-1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p09-enc-1",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p09"
+        },
+        "period": {
+          "start": "2026-01-14"
+        },
+        "reasonCode": [
+          {
+            "text": "Hospital admission: COPD exacerbation"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Pulmonology ward"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p09-enc-2",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p09-enc-2",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p09"
+        },
+        "period": {
+          "start": "2026-03-02"
+        },
+        "reasonCode": [
+          {
+            "text": "Pulmonology follow-up"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Pulmonology clinic"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

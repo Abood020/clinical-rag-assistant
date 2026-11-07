@@ -1,0 +1,424 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-p07",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:p07",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p07",
+        "name": [
+          {
+            "given": [
+              "Hassan"
+            ],
+            "family": "Al Zaabi"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1960-12-25"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-cond-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p07-cond-1",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "22298006",
+              "display": "Myocardial infarction"
+            }
+          ],
+          "text": "Myocardial infarction"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "resolved"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-02-11"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-cond-2",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p07-cond-2",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "53741008",
+              "display": "Coronary artery disease"
+            }
+          ],
+          "text": "Coronary artery disease"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-02-11"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-cond-3",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p07-cond-3",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "55822004",
+              "display": "Hyperlipidemia"
+            }
+          ],
+          "text": "Hyperlipidemia"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2017-04-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-med-1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p07-med-1",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Aspirin 81 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet once daily"
+          }
+        ],
+        "authoredOn": "2025-02-12"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-med-2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p07-med-2",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "status": "stopped",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Clopidogrel 75 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet once daily"
+          }
+        ],
+        "authoredOn": "2025-02-12"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-med-3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p07-med-3",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Atorvastatin 80 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet at night"
+          }
+        ],
+        "authoredOn": "2025-02-12"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-med-4",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p07-med-4",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Metoprolol 50 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet twice daily"
+          }
+        ],
+        "authoredOn": "2025-02-12"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-obs-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p07-obs-1",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6598-7",
+              "display": "Troponin T"
+            }
+          ],
+          "text": "Troponin T"
+        },
+        "effectiveDateTime": "2025-02-11",
+        "valueQuantity": {
+          "value": 2.3,
+          "unit": "ng/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0
+            },
+            "high": {
+              "value": 0.01
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-obs-2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p07-obs-2",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18262-6",
+              "display": "LDL cholesterol"
+            }
+          ],
+          "text": "LDL cholesterol"
+        },
+        "effectiveDateTime": "2025-02-11",
+        "valueQuantity": {
+          "value": 162,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0
+            },
+            "high": {
+              "value": 100
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-obs-3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p07-obs-3",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18262-6",
+              "display": "LDL cholesterol"
+            }
+          ],
+          "text": "LDL cholesterol"
+        },
+        "effectiveDateTime": "2025-08-15",
+        "valueQuantity": {
+          "value": 88,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0
+            },
+            "high": {
+              "value": 100
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-obs-4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p07-obs-4",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18262-6",
+              "display": "LDL cholesterol"
+            }
+          ],
+          "text": "LDL cholesterol"
+        },
+        "effectiveDateTime": "2026-03-01",
+        "valueQuantity": {
+          "value": 64,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0
+            },
+            "high": {
+              "value": 100
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-enc-1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p07-enc-1",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "period": {
+          "start": "2025-02-11"
+        },
+        "reasonCode": [
+          {
+            "text": "Admission: acute myocardial infarction"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Cardiac care unit"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p07-enc-2",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p07-enc-2",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p07"
+        },
+        "period": {
+          "start": "2026-03-01"
+        },
+        "reasonCode": [
+          {
+            "text": "Cardiology follow-up"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Cardiology clinic"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

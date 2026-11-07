@@ -1,0 +1,95 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-p10",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:p10",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p10",
+        "name": [
+          {
+            "given": [
+              "Noura"
+            ],
+            "family": "Al Suwaidi"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1999-02-08"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p10-obs-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p10-obs-1",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p10"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "effectiveDateTime": "2026-01-05",
+        "valueQuantity": {
+          "value": 13.5,
+          "unit": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0
+            },
+            "high": {
+              "value": 17.5
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p10-enc-1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p10-enc-1",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p10"
+        },
+        "period": {
+          "start": "2026-01-05"
+        },
+        "reasonCode": [
+          {
+            "text": "Pre-employment medical check"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Family medicine clinic"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

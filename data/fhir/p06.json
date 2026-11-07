@@ -1,0 +1,189 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-p06",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:p06",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p06",
+        "name": [
+          {
+            "given": [
+              "Aisha"
+            ],
+            "family": "Al Shamsi"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1980-04-17"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p06-cond-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p06-cond-1",
+        "subject": {
+          "reference": "Patient/p06"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "40930008",
+              "display": "Hypothyroidism"
+            }
+          ],
+          "text": "Hypothyroidism"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2019-08-08"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p06-med-1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p06-med-1",
+        "subject": {
+          "reference": "Patient/p06"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Levothyroxine 75 mcg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet every morning"
+          }
+        ],
+        "authoredOn": "2019-08-08"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p06-obs-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p06-obs-1",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p06"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3",
+              "display": "TSH"
+            }
+          ],
+          "text": "TSH"
+        },
+        "effectiveDateTime": "2025-12-01",
+        "valueQuantity": {
+          "value": 6.8,
+          "unit": "mIU/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.4
+            },
+            "high": {
+              "value": 4.0
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p06-obs-2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p06-obs-2",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p06"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3",
+              "display": "TSH"
+            }
+          ],
+          "text": "TSH"
+        },
+        "effectiveDateTime": "2026-06-03",
+        "valueQuantity": {
+          "value": 3.1,
+          "unit": "mIU/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.4
+            },
+            "high": {
+              "value": 4.0
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p06-enc-1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p06-enc-1",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p06"
+        },
+        "period": {
+          "start": "2026-06-03"
+        },
+        "reasonCode": [
+          {
+            "text": "Thyroid follow-up"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Endocrinology clinic"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

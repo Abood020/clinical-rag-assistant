@@ -1,0 +1,236 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-p05",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:p05",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p05",
+        "name": [
+          {
+            "given": [
+              "Omar"
+            ],
+            "family": "Haddad"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1972-09-09"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p05-cond-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p05-cond-1",
+        "subject": {
+          "reference": "Patient/p05"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Type 2 diabetes mellitus"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-11-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p05-allergy-1",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "p05-allergy-1",
+        "patient": {
+          "reference": "Patient/p05"
+        },
+        "criticality": "high",
+        "code": {
+          "text": "Shellfish"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Anaphylaxis"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p05-obs-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p05-obs-1",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p05"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "effectiveDateTime": "2025-11-02",
+        "valueQuantity": {
+          "value": 6.9,
+          "unit": "%"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.0
+            },
+            "high": {
+              "value": 5.6
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p05-obs-2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p05-obs-2",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p05"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "effectiveDateTime": "2026-05-10",
+        "valueQuantity": {
+          "value": 7.2,
+          "unit": "%"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.0
+            },
+            "high": {
+              "value": 5.6
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p05-obs-3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p05-obs-3",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p05"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index"
+            }
+          ],
+          "text": "Body mass index"
+        },
+        "effectiveDateTime": "2026-05-10",
+        "valueQuantity": {
+          "value": 29.4,
+          "unit": "kg/m2"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 18.5
+            },
+            "high": {
+              "value": 24.9
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p05-enc-1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p05-enc-1",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p05"
+        },
+        "period": {
+          "start": "2026-05-10"
+        },
+        "reasonCode": [
+          {
+            "text": "Primary care visit: lifestyle counselling"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Family medicine clinic"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

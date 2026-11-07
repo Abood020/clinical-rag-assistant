@@ -1,0 +1,373 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-p04",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:p04",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p04",
+        "name": [
+          {
+            "given": [
+              "Maryam"
+            ],
+            "family": "Al Ketbi"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1994-01-30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p04-cond-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p04-cond-1",
+        "subject": {
+          "reference": "Patient/p04"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "11687002",
+              "display": "Gestational diabetes"
+            }
+          ],
+          "text": "Gestational diabetes"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2026-08-14"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p04-cond-2",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p04-cond-2",
+        "subject": {
+          "reference": "Patient/p04"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "77386006",
+              "display": "Pregnancy"
+            }
+          ],
+          "text": "Pregnancy"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2026-03-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p04-med-1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p04-med-1",
+        "subject": {
+          "reference": "Patient/p04"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Insulin aspart"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Per sliding scale with meals"
+          }
+        ],
+        "authoredOn": "2026-08-20"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p04-med-2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p04-med-2",
+        "subject": {
+          "reference": "Patient/p04"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Folic acid 400 mcg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet once daily"
+          }
+        ],
+        "authoredOn": "2026-03-10"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p04-obs-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p04-obs-1",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p04"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2345-7",
+              "display": "Fasting glucose"
+            }
+          ],
+          "text": "Fasting glucose"
+        },
+        "effectiveDateTime": "2026-08-14",
+        "valueQuantity": {
+          "value": 112,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70
+            },
+            "high": {
+              "value": 99
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p04-obs-2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p04-obs-2",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p04"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2345-7",
+              "display": "Fasting glucose"
+            }
+          ],
+          "text": "Fasting glucose"
+        },
+        "effectiveDateTime": "2026-09-20",
+        "valueQuantity": {
+          "value": 104,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70
+            },
+            "high": {
+              "value": 99
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p04-obs-3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p04-obs-3",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p04"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "effectiveDateTime": "2026-09-20",
+        "valueQuantity": {
+          "value": 136,
+          "unit": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 90
+            },
+            "high": {
+              "value": 130
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p04-obs-4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p04-obs-4",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p04"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "effectiveDateTime": "2026-09-20",
+        "valueQuantity": {
+          "value": 87,
+          "unit": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 60
+            },
+            "high": {
+              "value": 85
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p04-obs-5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p04-obs-5",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p04"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "effectiveDateTime": "2026-09-20",
+        "valueQuantity": {
+          "value": 10.9,
+          "unit": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0
+            },
+            "high": {
+              "value": 17.5
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p04-enc-1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p04-enc-1",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p04"
+        },
+        "period": {
+          "start": "2026-09-20"
+        },
+        "reasonCode": [
+          {
+            "text": "Antenatal visit (28 weeks)"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Obstetrics clinic"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

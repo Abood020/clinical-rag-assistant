@@ -1,0 +1,439 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "bundle-p02",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:p02",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p02",
+        "name": [
+          {
+            "given": [
+              "Fatima"
+            ],
+            "family": "Al Hosani"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1955-07-22"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p02-cond-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p02-cond-1",
+        "subject": {
+          "reference": "Patient/p02"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Type 2 diabetes mellitus"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2010-02-18"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p02-cond-2",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p02-cond-2",
+        "subject": {
+          "reference": "Patient/p02"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "433144002",
+              "display": "Chronic kidney disease stage 3"
+            }
+          ],
+          "text": "Chronic kidney disease stage 3"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2023-06-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p02-med-1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p02-med-1",
+        "subject": {
+          "reference": "Patient/p02"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Metformin 500 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet once daily (dose reduced for kidney function)"
+          }
+        ],
+        "authoredOn": "2023-06-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p02-med-2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p02-med-2",
+        "subject": {
+          "reference": "Patient/p02"
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Empagliflozin 10 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet once daily"
+          }
+        ],
+        "authoredOn": "2024-01-12"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p02-med-3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "p02-med-3",
+        "subject": {
+          "reference": "Patient/p02"
+        },
+        "status": "stopped",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Metformin 1000 mg tablet"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tablet twice daily"
+          }
+        ],
+        "authoredOn": "2010-02-18"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p02-obs-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p02-obs-1",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p02"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33914-3",
+              "display": "eGFR"
+            }
+          ],
+          "text": "eGFR"
+        },
+        "effectiveDateTime": "2024-05-01",
+        "valueQuantity": {
+          "value": 58,
+          "unit": "mL/min/1.73m2"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 90
+            },
+            "high": {
+              "value": 120
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p02-obs-2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p02-obs-2",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p02"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33914-3",
+              "display": "eGFR"
+            }
+          ],
+          "text": "eGFR"
+        },
+        "effectiveDateTime": "2025-05-03",
+        "valueQuantity": {
+          "value": 51,
+          "unit": "mL/min/1.73m2"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 90
+            },
+            "high": {
+              "value": 120
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p02-obs-3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p02-obs-3",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p02"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33914-3",
+              "display": "eGFR"
+            }
+          ],
+          "text": "eGFR"
+        },
+        "effectiveDateTime": "2026-05-06",
+        "valueQuantity": {
+          "value": 44,
+          "unit": "mL/min/1.73m2"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 90
+            },
+            "high": {
+              "value": 120
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p02-obs-4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p02-obs-4",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p02"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine"
+            }
+          ],
+          "text": "Creatinine"
+        },
+        "effectiveDateTime": "2026-05-06",
+        "valueQuantity": {
+          "value": 1.4,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.6
+            },
+            "high": {
+              "value": 1.2
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p02-obs-5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p02-obs-5",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p02"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium"
+            }
+          ],
+          "text": "Potassium"
+        },
+        "effectiveDateTime": "2026-05-06",
+        "valueQuantity": {
+          "value": 5.4,
+          "unit": "mmol/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5
+            },
+            "high": {
+              "value": 5.1
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p02-obs-6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "p02-obs-6",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p02"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "effectiveDateTime": "2026-05-06",
+        "valueQuantity": {
+          "value": 7.1,
+          "unit": "%"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.0
+            },
+            "high": {
+              "value": 5.6
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "H"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:p02-enc-1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "p02-enc-1",
+        "status": "finished",
+        "subject": {
+          "reference": "Patient/p02"
+        },
+        "period": {
+          "start": "2026-05-06"
+        },
+        "reasonCode": [
+          {
+            "text": "Nephrology review"
+          }
+        ],
+        "location": [
+          {
+            "location": {
+              "display": "Nephrology clinic"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
