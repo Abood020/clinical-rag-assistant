@@ -4,6 +4,7 @@ Run:  streamlit run app.py
 """
 
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -59,8 +60,39 @@ with st.sidebar:
     st.caption("The judge is a larger model than the generator, so the checker is more capable "
                "than what it checks. Both are open-weight and could be self-hosted.")
 
+def correct_statement(pid: str) -> str:
+    """A true, cited statement from the record: the most recent lab result."""
+    labs = [f for f in load_patient(pid) if f.category == "lab"]
+    latest = max(labs, key=lambda f: f.date)
+    return f"- {latest.text.removeprefix('Result: ')} [{latest.source_id}]"
+
+
+def injected_errors(pid: str) -> dict[str, str]:
+    """Hallucinations to insert by hand, to show the checker catching them live."""
+    facts = load_patient(pid)
+    options = {}
+    labs = [f for f in facts if f.category == "lab"]
+    if labs:
+        latest = max(labs, key=lambda f: f.date)
+        m = re.search(r"= (\d+(?:\.\d+)?)", latest.text)
+        if m:
+            wrong = round(float(m.group(1)) * 1.5 + 1, 1)
+            wrong_text = latest.text.replace(f"= {m.group(1)}", f"= {wrong}", 1).removeprefix("Result: ")
+            options["Wrong lab value"] = f"- {wrong_text} [{latest.source_id}]"
+    meds = [f.source_id for f in facts if f.category == "medication"]
+    options["Invented medication"] = f"- Atenolol 50 mg tablet, 1 tablet once daily [{meds[0] if meds else f'Patient/{pid}'}]"
+    if any(f.category == "allergy" for f in facts):
+        options["Deny a real allergy"] = f"- No known drug or food allergies [Patient/{pid}]"
+    stopped = [f for f in facts if f.category == "medication" and "status: stopped" in f.text]
+    if stopped:
+        name = stopped[0].text.removeprefix("Medication: ").split(",")[0]
+        options["Stopped drug as current"] = f"- Currently taking {name} [{stopped[0].source_id}]"
+    return options
+
+
 st.header(patients[pid])
-tab_summary, tab_ask, tab_record = st.tabs(["📋 Clinical summary", "💬 Ask the record", "🗂️ Source record (FHIR)"])
+tab_summary, tab_ask, tab_test, tab_record = st.tabs(
+    ["📋 Clinical summary", "💬 Ask the record", "🧪 Test the checker", "🗂️ Source record (FHIR)"])
 
 with tab_summary:
     if st.button("Generate summary", type="primary"):
@@ -89,6 +121,24 @@ with tab_ask:
             st.code("\n".join(out.sources), language=None)
         st.subheader("Faithfulness check")
         show_check(out.text, pid, question)
+
+with tab_test:
+    st.write("The assistant rarely makes mistakes on these small records, so here you can **insert a "
+             "hallucination yourself** and watch the checker catch it.")
+    key = f"test_text_{pid}"
+    if key not in st.session_state:
+        st.session_state[key] = correct_statement(pid)
+    st.caption("Insert an error:")
+    errors = injected_errors(pid)
+    err_cols = st.columns(len(errors) + 1)
+    if err_cols[0].button("✅ Correct statement", use_container_width=True):
+        st.session_state[key] = correct_statement(pid)
+    for col, (label, text) in zip(err_cols[1:], errors.items()):
+        if col.button(f"❌ {label}", use_container_width=True):
+            st.session_state[key] = text
+    st.text_area("Statement to check (you can also edit it):", key=key, height=90)
+    if st.button("Check this statement", type="primary"):
+        show_check(st.session_state[key], pid)
 
 with tab_record:
     st.caption("Each line is one FHIR resource. The ID in brackets is what the assistant cites.")
