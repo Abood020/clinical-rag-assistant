@@ -27,10 +27,11 @@ CITATION = re.compile(r"\[([A-Za-z]+/[A-Za-z0-9-]+)\]")
 DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
 NUMBER = re.compile(r"(?<![A-Za-z0-9/-])\d+(?:\.\d+)?")
 
-# LLMs often write Unicode dashes and narrow spaces ("2026‑04‑20", "9.1 %").
-# Normalize them so the same value is recognized in both texts.
+# LLMs often write Unicode dashes, narrow spaces, and CJK brackets ("2026‑04‑20", "9.1 %",
+# "【Observation/p01-obs-1】"). Normalize them so values and citations are recognized.
 _UNICODE_FIXES = str.maketrans({"‐": "-", "‑": "-", "‒": "-", "–": "-",
-                                "—": "-", "−": "-", " ": " ", " ": " "})
+                                "—": "-", "−": "-", " ": " ", " ": " ",
+                                "【": "[", "】": "]"})
 
 
 def _normalize(text: str) -> str:
